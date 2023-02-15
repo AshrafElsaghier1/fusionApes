@@ -1,7 +1,12 @@
 import React from "react";
+import NavBar from "../NavBar/NavBar";
 
 function Header() {
-  return <div>Header</div>;
+  return (
+    <header className="border h-[90vh] bg-main-color">
+      <NavBar />
+    </header>
+  );
 }
 
 export default Header;
