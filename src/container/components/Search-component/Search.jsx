@@ -1,7 +1,7 @@
 import React from "react";
 function Search() {
   return (
-    <section className="search-section">
+    <section className="search-section pt-9">
       <div className="px-3 container mx-auto flex flex-col items-center mt-5">
         <h1 className="header-title text-xl md:text-3xl lg:text-6xl font-semibold text-main-color mb-8">
           Text to Image AI Generator
