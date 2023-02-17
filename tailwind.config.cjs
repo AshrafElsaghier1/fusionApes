@@ -11,7 +11,7 @@ module.exports = {
         "nav-color": "#222222d6",
       },
       backgroundImage: {
-        "header-img": "url('./public/assets/header/image 2.svg')",
+        "header-img": "url('../assets/header/image 2.svg')",
       },
     },
   },
