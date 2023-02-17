@@ -1,26 +1,21 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
-import headerImg from "../../../../public/assets/header/image 2.svg";
 import "./style.css";
-function Header() {
+function Header({ setIsMeneuOpen, isMenueOpen }) {
+  console.log({ isMenueOpen });
   return (
     <header className="h-[80vh] lg:h-[100vh] bg-header-img bg-cover bg-bottom flex flex-col">
-      <NavBar />
-      <div className="header-content flex flex-col justify-center items-center border h-100 flex-1 text-white">
-        <p className="px-[70px] md:px-[200px] py-[10px] border-2 border-text-color rounded-full">
-          FusionApes Presents
-        </p>
+      <NavBar setIsMeneuOpen={setIsMeneuOpen} isMenueOpen={isMenueOpen} />
+      <div className="header-content flex justify-center items-start h-full text-white">
+        <div className="flex flex-col justify-end items-center h-[70%]">
+          <p className="px-[70px] text-xl font-normal md:px-[200px] py-[10px] border border-text-color rounded-full">
+            FusionApes Presents
+          </p>
+          <h1 className="text-9xl font-semibold header-title mt-[45px]">
+            BAKED <span className="text-transparent">AT</span>
+          </h1>
+        </div>
       </div>
-      {/* <div
-        id="img-container"
-        className="w-full h-full overflow-hidden flex items-end opacity-[100%]"
-      >
-        <img
-          src="../../../../public/assets/header/image 2.svg"
-          alt=""
-          className="inner w-auto lg:w-full"
-        />
-      </div> */}
     </header>
   );
 }

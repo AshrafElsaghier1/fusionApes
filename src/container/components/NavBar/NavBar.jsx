@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import logoImg from "../../../../public/assets/header/FusionApes Color Palette 2.svg";
-import { AiOutlineMenuFold } from "react-icons/ai";
-function NavBar() {
+import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
+function NavBar({ setIsMeneuOpen, isMenueOpen }) {
   return (
-    <nav className="lg:bg-nav-color h-[80px] flex items-center justify-end lg:justify-center">
+    <nav className="lg:bg-nav-color h-[80px] flex items-center justify-end lg:justify-center relative">
       <div className="hidden px-2 container mx-auto lg:flex justify-between items-center">
         <div className="flex logo-img ">
           <img src={logoImg} alt="logo-image" />
@@ -28,9 +28,14 @@ function NavBar() {
           </button>
         </div>
       </div>
-      <div className="p-2 bg-nav-color mx-5">
-        <AiOutlineMenuFold className="text-main-color text-2xl" />
-      </div>
+      <button
+        onClick={() => setIsMeneuOpen((pre) => !pre)}
+        className={`p-2 outline-none bg-nav-color mx-5 absolute left-0 transition-all duration-500 ${
+          isMenueOpen && "transform -translate-x-16"
+        } `}
+      >
+        <AiOutlineMenuUnfold className="text-main-color text-2xl" />
+      </button>
     </nav>
   );
 }

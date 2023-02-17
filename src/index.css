@@ -6,3 +6,11 @@
   /* font-family: "Poppins", sans-serif; */
   font-family: "Roboto", sans-serif;
 }
+
+.header-title {
+  font-family: "Poppins", sans-serif;
+}
+
+.header-title span {
+  -webkit-text-stroke: 2px white;
+}
