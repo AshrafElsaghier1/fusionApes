@@ -30,11 +30,11 @@ function NavBar({ setIsMeneuOpen, isMenueOpen }) {
       </div>
       <button
         onClick={() => setIsMeneuOpen((pre) => !pre)}
-        className={`p-2 outline-none bg-nav-color mx-5 absolute left-0 transition-all duration-500 ${
+        className={`box p-2 outline-none bg-nav-color mx-5 absolute left-0 lg:hidden transform rotate-45 transition-all duration-500 ${
           isMenueOpen && "transform -translate-x-16"
         } `}
       >
-        <AiOutlineMenuUnfold className="text-main-color text-2xl" />
+        <AiOutlineMenuUnfold className="text-main-color text-2xl transform -rotate-45" />
       </button>
     </nav>
   );
