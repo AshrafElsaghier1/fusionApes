@@ -26,7 +26,7 @@
       #112 50%,
       #213
     ),
-    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    conic-gradient(from var(--border-angle), transparent 20%, white, #edb731);
   background-size: calc(100% - (var(--border-size) * 2))
       calc(100% - (var(--border-size) * 2)),
     cover;
@@ -46,4 +46,9 @@
   syntax: "<angle>";
   inherits: true;
   initial-value: 0turn;
+}
+
+.search-section {
+  background-image: url(../public/assets/search-component/Rectangle\ 10.svg);
+  background-repeat: repeat;
 }
