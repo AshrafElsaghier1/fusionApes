@@ -8,11 +8,11 @@ function Header({ setIsMeneuOpen, isMenueOpen }) {
       <NavBar setIsMeneuOpen={setIsMeneuOpen} isMenueOpen={isMenueOpen} />
       <div className="header-content flex justify-center items-start h-full text-white">
         <div className="flex flex-col justify-end items-center h-[70%]">
-          <p className="px-[70px] text-xl font-normal md:px-[200px] py-[10px] border border-text-color rounded-full">
+          <p className="px-[40px] md:px-[120px] lg:px-[180px] text-xl font-normal py-[10px] border border-text-color rounded-full">
             FusionApes Presents
           </p>
-          <h1 className="text-9xl font-semibold header-title mt-[45px]">
-            BAKED <span className="text-transparent">AT</span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl lg:font-semibold header-title mt-[45px]">
+            BAKED <span className="text-transparent">AI</span>
           </h1>
         </div>
       </div>
