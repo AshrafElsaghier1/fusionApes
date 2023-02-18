@@ -20,7 +20,7 @@ const Creation = () => {
       <div className="container mx-auto px-2">
         <div className="creation__inner mb-8">
           <div className="creation__inner-top">
-            <h2 className="header-title    text-main-color font-semibold mb-3 md:mb-5 text-3xl  md:text-4xl lg:6xl ">
+            <h2 className="header-title    text-main-color font-semibold mb-3 md:mb-5 text-3xl  md:text-4xl lg:text-6xl ">
               Best Creations
             </h2>
             <p className="text-base  text-text-color  md:text-xl lg:text-2xl">

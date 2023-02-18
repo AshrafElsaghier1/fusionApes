@@ -54,8 +54,8 @@ function Aside({ setIsMeneuOpen, isMenueOpen }) {
   ];
   return (
     <aside
-      className={`flex flex-col justify-start items-center pt-4 text-white w-[200px] h-[100vh] absolute top-0 left-0 bg-nav-color transition-all duration-500 delay-75
-			${!isMenueOpen && "-translate-x-60"}
+      className={`flex flex-col justify-start items-center pt-4 text-white w-[250px] h-[100vh] fixed top-0 left-0 bg-nav-color transition-all duration-500 delay-75
+			${!isMenueOpen && "-translate-x-[270px]"}
 			`}
     >
       <img
@@ -91,9 +91,11 @@ function Aside({ setIsMeneuOpen, isMenueOpen }) {
 
       <button
         onClick={() => setIsMeneuOpen((pre) => !pre)}
-        className={`p-2 outline-none bg-nav-color mx-5 absolute -right-14  `}
+        className={`box p-2 outline-none bg-nav-color mx-5 fixed top-6 transform  lg:hidden   rotate-45 transition-all duration-500 ${
+          isMenueOpen ? "left-[240px] " : "left-[275px]"
+        } `}
       >
-        <AiOutlineMenuFold className="text-main-color text-2xl" />
+        <AiOutlineMenuUnfold className="text-main-color text-2xl transform -rotate-45" />
       </button>
     </aside>
   );

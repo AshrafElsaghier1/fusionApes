@@ -1,15 +1,13 @@
-import React, { useState } from "react";
 import logoImg from "../../../../public/assets/header/FusionApes Color Palette 2.svg";
-import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
-function NavBar({ setIsMeneuOpen, isMenueOpen }) {
+function NavBar() {
   return (
-    <nav className="lg:bg-nav-color h-[80px] flex items-center justify-end lg:justify-center relative">
-      <div className="hidden px-2 container mx-auto lg:flex justify-between items-center">
+    <nav className="lg:bg-nav-color h-[80px]  items-center justify-end lg:justify-center w-full hidden lg:flex fixed">
+      <div className=" px-2 container mx-auto lg:flex justify-between items-center  ">
         <div className="flex logo-img ">
           <img src={logoImg} alt="logo-image" />
         </div>
-        <div className="flex flex-shrink justify-center w-full">
-          <ul className="flex justify-center w-full text-white lg:transform lg:translate-x-20 ">
+        <div className="flex flex-shrink justify-center   ">
+          <ul className="flex xl:justify-center w-full text-white lg:transform lg:translate-x-20 md:justify-start ">
             <li className="mr-3">Home</li>
             <li className="mx-3">AI Tool</li>
             <li className="mx-3">Our Story</li>
@@ -28,14 +26,6 @@ function NavBar({ setIsMeneuOpen, isMenueOpen }) {
           </button>
         </div>
       </div>
-      <button
-        onClick={() => setIsMeneuOpen((pre) => !pre)}
-        className={`box p-2 outline-none bg-nav-color mx-5 absolute left-0 lg:hidden transform rotate-45 transition-all duration-500 ${
-          isMenueOpen && "transform -translate-x-16"
-        } `}
-      >
-        <AiOutlineMenuUnfold className="text-main-color text-2xl transform -rotate-45" />
-      </button>
     </nav>
   );
 }
