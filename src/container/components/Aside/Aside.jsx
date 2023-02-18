@@ -95,7 +95,11 @@ function Aside({ setIsMeneuOpen, isMenueOpen }) {
           isMenueOpen ? "left-[240px] " : "left-[275px]"
         } `}
       >
-        <AiOutlineMenuUnfold className="text-main-color text-2xl transform -rotate-45" />
+        {!isMenueOpen ? (
+          <AiOutlineMenuUnfold className="text-main-color text-2xl transform -rotate-45" />
+        ) : (
+          <AiOutlineMenuFold className="text-main-color text-2xl transform -rotate-45" />
+        )}
       </button>
     </aside>
   );
